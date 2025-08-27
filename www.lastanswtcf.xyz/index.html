@@ -1,0 +1,143 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#000000">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="description" content="lastanswtcf presence – dsc presence viewer">
+<meta name="keywords" content="discord presence, lastanswtcf, discord status, presence viewer, discord tracking, lastanswtcf social">
+<meta property="og:type" content="website">
+<meta property="og:title" content="user: lastanswtcf">
+<meta property="og:description" content="dsc presence viewer">
+<meta property="og:url" content="https://www.lastanswtcf.xyz/">
+<meta property="og:image" content="../i.pinimg.com/1200x/80/f0/19/80f01908e898e4c2a29f86f91474cb27.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="dsc presence screenshot">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="user: lastanswtcf">
+<meta name="twitter:description" content="minimal dsc presence viewer, real-time">
+<meta name="twitter:image" content="https://i.pinimg.com/1200x/80/f0/19/80f01908e898e4c2a29f86f91474cb27.jpg">
+<meta name="twitter:image:alt" content="dsc presence preview">
+<meta name="twitter:site" content="@lastanswtcf">
+<meta name="twitter:creator" content="@lastanswtcf">
+<title>lastanswtcf</title>
+<link rel="icon" href="../i.ibb.co/b54ZcdBK/lll.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script defer="" src="../cloud.umami.is/script.js" data-website-id="4dfb5ab9-2aec-4a04-ae16-e6ce189a67e7"></script>
+<link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div id="customCursor"></div>
+    <div id="wakeup-overlay" class="wakeup-overlay">
+        <div class="wakeup-content">
+            <div class="pulse-dot"></div>
+            <div class="wake-text">waking up...</div>
+        </div>
+    </div>
+
+    <div class="starfield" id="starfield"></div>
+    <nav class="fixed-nav">
+        <div class="nav-container">
+            <button class="nav-link active" onclick="showpage('home')">home</button>
+            <button class="nav-link" onclick="showpage('contact')">contact</button>
+        </div>
+    </nav>
+
+    <div id="home" class="container">
+        <div class="content">
+            <div class="header">
+                <h1 class="name">lastanswtcf</h1>
+                <p class="tagline">You can succeed, just trust yourself!</p>
+            </div>
+
+            <div class="discord-card">
+                <div class="profile-row">
+                    <div class="avatar-container">
+                        <img id="avatar" class="avatar" src="../cdn.discordapp.com/embed/avatars/0.png" alt="Avatar" onclick="showavtmodal()">
+                        <div id="status-dot" class="status-indicator offline"></div>
+                    </div>
+                    <div class="user-details">
+                        <div class="username" id="username">lastanswtcf</div>
+                        <div class="status-text" id="status-text">Offline</div>
+                    </div>
+                </div>
+                
+                <div id="activities" class="activities-container"></div>
+            </div>
+
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="info-label">Location</div>
+                    <div class="info-value">Romania</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Timezone</div>
+                    <div class="info-value">GMT+3</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="container hidden">
+        <div class="content">
+            <div class="header">
+                <h1 class="name">contact</h1>
+                <p class="tagline">Let's connect and create something extraordinary together</p>
+            </div>
+
+            <div class="contact-grid">
+                <a href="https://discord.com/users/1170109139989561464" class="contact-item" target="_blank" rel="noopener noreferrer">
+                    <div class="contact-icon">
+                        <i class="fab fa-discord"></i>
+                    </div>
+                    <div class="contact-details">
+                        <div class="contact-label">Discord</div>
+                        <div class="contact-value">lastanswtcfswg</div>
+                    </div>
+                </a>
+                
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=contacts@lastanswtcf.xyz" class="contact-item" target="_blank" rel="noopener noreferrer">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <div class="contact-label">Email</div>
+                        <div class="contact-value">contacts@lastanswtcf.xyz</div>
+                    </div>
+                </a>
+
+                <a href="https://paypal.me/advzicbro" class="contact-item donate-item" target="_blank" rel="noopener noreferrer">
+                    <div class="contact-icon donate-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="contact-details">
+                        <div class="contact-label">Support My Work</div>
+                        <div class="contact-value">Buy me a coffee</div>
+                    </div>
+                    <div class="donate-accent"></div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="avatarmodal" class="avatar-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Avatar History</h3>
+                <button class="close-btn" onclick="closeavtmodal()">�</button>
+            </div>
+            <div id="avatarscontainer">
+                <div class="loading"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="main.js"></script>
+
+
+</body></html>
